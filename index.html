@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+		crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+	<!-- header -->
+	<header>
+		<nav id="nav">
+			<div class="logo"><img src="assets/img/logo.svg" alt="" /></div>
+			<div class="nav-links">
+				<ul>
+					<li><a href="#">Captain Kidd</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+			<div class="nav-links-m">
+				<ul>
+					<li><a href="#">Captain Kidd</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+			<button class="nav-btn">Start Free Trial</button>
+			<button class="nav-menu" onclick="toggleMenu()"><i class="fas fa-bars fa-2x"></i></button>
+		</nav>
+	</header>
+	<!-- hero -->
+	<div class="hero"><img src="assets/img/hero.png" alt="" /></div>
+	<div class="hero-m"><img src="assets/img/hero-m.png" alt="" /></div>
+	<!-- content -->
+	<div class="content">
+		<h1>Meet Captain Kidd & Friends</h1>
+		<p>
+			Join the fun with Pete (aka Captain Kidd), Brionny, Chris, Dee, and the
+			rest as they <br />
+			team up to try new things, solve problems, and have some terrific times
+			together in <br />
+			cozy little Kiddopia Town.
+		</p>
+		<h1>Watch Now! 📺</h1>
+		<p>Watch the latest episodes on our official Youtube channel</p>
+	</div>
+	<div class="swiper mySwiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="assets/img/slider.png" alt=""></div>
+			<div class="swiper-slide"><img src="assets/img/slider1.png" alt=""></div>
+			<div class="swiper-slide"><img src="assets/img/slider3.png" alt=""></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="links">
+			<ul>
+				<li>About us</li>
+				<li>Blog</li>
+				<li>Contact</li>
+			</ul>
+			<ul>
+				<li>Help</li>
+				<li>Privacy</li>
+				<li>Term and Conditions</li>
+			</ul>
+		</div>
+		<div class="apps">
+			<ul>
+				<li><img src="assets/img/footer1.png" alt="" /></li>
+				<li><img src="assets/img/footer2.png" alt="" /></li>
+				<li><img src="assets/img/footer3.png" alt="" /></li>
+			</ul>
+		</div>
+		<div class="social-links">
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></i></a>
+			<a href="#"><i class="fab fa-pinterest-p"></i></a>
+			<a href="#"><i class="fab fa-linkedin-in"></i></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+		</div>
+	</footer>
+
+	<script>
+		let i = 0
+		let navLinks = document.querySelector('.nav-links-m')
+		const toggleMenu = () => {
+			if (i === 0) {
+				navLinks.style.opacity = '1'
+				navLinks.style.left = '0'
+				navLinks.style.width = '100%'
+				navLinks.style.transition = '1s'
+				i++
+				console.log(i)
+			} else {
+				navLinks.style.opacity = '0'
+				navLinks.style.left = '-100%'
+				navLinks.style.width = '0'
+				navLinks.style.transition = '1s'
+				i--
+				console.log(i)
+			}
+		}
+	</script>
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			pagination: {
+				el: ".swiper-pagination",
+				dynamicBullets: true,
+			},
+			centeredSlides: true,
+			loop: true,
+			spaceBetween: 0,
+			slidesPerView: 2,
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 35,
+				depth: 250,
+				modifier: 1,
+				slideShadows: false,
+			},
+		});
+	</script>
+</body>
+
+</html>
